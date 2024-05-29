@@ -1,0 +1,89 @@
+.title{
+  padding: 5%;;
+  ion-col{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  span{
+    font-weight: 600;
+    font-weight: 300;
+  }
+  ion-icon{
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+  }
+}
+// .container{
+
+//   border-top-left-radius: 30px;
+//   border-top-right-radius: 30px;
+//   background-color: white;
+
+//   padding: 5%;
+//   .main{
+//     overflow-y: auto;
+//     display: flex;
+//     gap: 12px;
+//     .image-logo{
+//
+//     }
+//   }
+// }
+
+.doctor-speciality {
+  overflow-y: auto;
+  display: flex;
+  padding:5%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  gap: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: white;
+}
+.dr img{
+  margin-top: 10px;
+  max-width: 50px;
+  background-color:#C9CACD;
+  padding: 10px;
+  border-radius: 50%;
+}
+.chats{
+  padding: 5%;
+  background-color: white;
+  ion-card{
+    width: 100%;
+  }
+  ion-img{
+    margin-top: 10px;
+    max-width: 60px;
+    background-color:#C9CACD;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 10px !important;
+  }
+  h5{
+    font-size: 16px;
+  }
+  .dot{
+    position: relative;
+    top: 38px;
+    right: 16px;
+  }
+  span{
+    font-size: 14px;
+  }
+  .time {
+    display: flex;
+    justify-content: flex-end;
+    span{
+      font-size: 12px;
+    }
+  }
+
+
+}
+

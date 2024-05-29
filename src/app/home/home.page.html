@@ -1,0 +1,44 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab($event)">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon
+        *ngIf="selectedTab ==='home'"
+        name="caret-down-outline"
+      ></ion-icon>
+      <ion-icon name="home"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button tab="explore">
+      <ion-icon
+        *ngIf="selectedTab ==='explore'"
+        name="caret-down-outline"
+      ></ion-icon>
+      <ion-icon name="location"></ion-icon>
+      Explore
+    </ion-tab-button>
+    <ion-tab-button tab="bookings">
+      <ion-icon
+        *ngIf="selectedTab ==='bookings'"
+        name="caret-down-outline"
+      ></ion-icon>
+      <ion-icon name="calendar"></ion-icon>
+      Bookings
+    </ion-tab-button>
+    <ion-tab-button tab="chat">
+      <ion-icon
+        *ngIf="selectedTab ==='chat'"
+        name="caret-down-outline"
+      ></ion-icon>
+      <ion-icon name="chatbox-ellipses"></ion-icon>
+      Chat
+    </ion-tab-button>
+    <ion-tab-button tab="login">
+      <ion-icon
+        *ngIf="selectedTab ==='login'"
+        name="caret-down-outline"
+      ></ion-icon>
+      <ion-icon name="person"></ion-icon>
+      user
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

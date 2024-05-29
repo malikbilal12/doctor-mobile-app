@@ -1,0 +1,8 @@
+<div class="scroller" data-speed="fast">
+  <div class="tag-list scroller__inner">
+    <div *ngFor="let dr of drSpeclist; let i = index" class="dr">
+      <img class="rounded-circle" src="{{ dr.img }}" alt="" />
+      <p class="fw-bold mt-2">{{ dr.name }}</p>
+    </div>
+  </div>
+</div>

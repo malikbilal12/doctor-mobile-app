@@ -1,0 +1,185 @@
+<ion-content>
+  <div class="location">
+    <ion-text slot="start"><span>Location</span></ion-text>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <ion-icon
+        slot="start"
+        class="me-1"
+        name="location"
+        color="primary"
+      ></ion-icon>
+      <span>New York, USA<ion-icon name="chevron-down"></ion-icon></span>
+      <ion-icon
+        class="ms-auto"
+        slot="end"
+        size="large"
+        name="notifications-circle-outline"
+      ></ion-icon>
+    </div>
+    <ion-row class="d-flex justify-content-center align-items-center mt-2">
+      <ion-col class="ion-no-padding" size="10">
+        <ion-label position="floating">
+          <ion-input placeholder="Search" color="none">
+            <ion-icon color="primary" name="search" slot="start"></ion-icon>
+          </ion-input>
+        </ion-label>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button>
+          <ion-icon name="options"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="mt-3">
+    <div class="heading d-flex justify-content-between align-items-center">
+      <h4>
+        Upcoming Schedule
+        <span class="bg-primary rounded-circle p-1 ms-1 text-white">8</span>
+      </h4>
+
+      <a href="">See All</a>
+    </div>
+    <ion-card [@clickedState]="clickInfo" (click)="onToggle()">
+      <ion-card-header>
+        <div class="d-flex justify-content-center align-items-center">
+          <img class="rounded-circle me-2" src="assets/dr.jpg" alt="" />
+          <div class="mt-3">
+            <h6 class="m-0">Dr. Alana Rueter</h6>
+            <p>Dentist Consultation</p>
+          </div>
+          <ion-icon
+            size="large"
+            name="call"
+            color="primary"
+            class="ms-auto bg-white rounded-circle p-2"
+          ></ion-icon>
+        </div>
+      </ion-card-header>
+
+      <ion-card-content class="mx-4 mb-4 schedule-time">
+        <div class="d-flex justify-content-between align-items-center pt-3">
+          <div class="icon-span">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <span class="ms-2">Monday, 26 July</span>
+          </div>
+          <div class="vertical-line ms-2"></div>
+          <div class="icon-span ms-2">
+            <ion-icon name="time-outline"></ion-icon>
+            <span class="ms-2">09:00 - 10:00</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <div class="speciality mt-3">
+      <div
+        class="heading mb-2 d-flex justify-content-between align-items-center"
+      >
+        <h4>Doctor Speciality</h4>
+        <a href="">See All</a>
+      </div>
+      <div class="doctor-speciality">
+        <app-scroller></app-scroller>
+        <!-- <div *ngFor="let dr of drSpeclist; let i = index" class="dr">
+            <img
+              (click)="onSelected(dr)"
+              [@selectState]="selectedImage === dr ? 'selected' : 'unselected'"
+              class="rounded-circle"
+              src="{{ dr.img }}"
+              alt=""
+            />
+            <p class="fw-bold mt-2">{{ dr.name }}</p>
+          </div> -->
+      </div>
+    </div>
+    <div class="nearby mt-3">
+      <div
+        class="heading d-flex mb-2 justify-content-between align-items-center"
+      >
+        <h4>Nearby Hospitals</h4>
+        <a href="">See All</a>
+      </div>
+      <div class="nearby-hospital">
+        <div class="nearby-hospitals shadow mb-2" *ngFor="let loc of location">
+          <div
+            class="hospitals"
+            [style.background-image]="'url(' + loc.img + ')'"
+          >
+            <ion-icon
+              size="large"
+              color="light"
+              class="like"
+              name="heart-circle"
+            ></ion-icon>
+            <div class="star">
+              <ion-icon color="warning" name="star"></ion-icon>{{ loc.rate }}
+            </div>
+          </div>
+          <div class="hospital-location">
+            <h4 class="ms-3 mb-1 fw-400">{{ loc.name }}</h4>
+            <div class="ms-3 mb-2 d-flex align-items-center">
+              <ion-icon color="primary" class="me-1" name="time"></ion-icon>
+              <span class="locations">{{ loc.time }}</span>
+              <ion-icon class="mx-2 dot" size name="ellipse"></ion-icon>
+              <span class="locations">{{ loc.dist }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-dr mt-3">
+      <div class="heading d-flex justify-content-between align-items-center">
+        <h4>Top Specialists</h4>
+        <a href="">See All</a>
+      </div>
+      <ion-card @doctorAddState class="mb-4" *ngFor="let top of displayedUsers">
+        <div class="head p-2">
+          <ion-row>
+            <ion-col size="4">
+              <img class="rounded" src="{{ top.img }}" alt="" />
+            </ion-col>
+            <ion-col size="8">
+              <div
+                class="intro d-flex justify-content-between align-items-center"
+              >
+                <h3
+                  class="m-0 text-primary d-flex align-items-center justify-content-between"
+                >
+                  <ion-icon
+                    class="me-1"
+                    color="primary"
+                    name="checkmark-circle"
+                  ></ion-icon
+                  >Proffrensional Doctor
+                </h3>
+                <ion-icon size="large" name="heart-outline"></ion-icon>
+              </div>
+              <div class="doctor-name">
+                <h3 class="m-0">{{ top.name }}</h3>
+                <span>{{ top.p }}</span>
+              </div>
+              <div class="review mt-2">
+                <ion-icon color="warning" name="star"></ion-icon>
+                <ion-icon color="warning" name="star"></ion-icon>
+                <ion-icon color="warning" name="star"></ion-icon>
+                <ion-icon color="warning" name="star"></ion-icon>
+                <strong class="mx-2">{{ top.rate }}</strong> |
+                <span class="ms-2">{{ top.veiw }} Reviews</span>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div class="button-appoint">
+          <button (click)="makeApp(top)" class="text-capitalize btn-lg">
+            Make Appointment
+          </button>
+        </div>
+      </ion-card>
+      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </div>
+  </div>
+</ion-content>

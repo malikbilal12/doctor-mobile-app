@@ -1,0 +1,191 @@
+:host{
+  display: block;
+}
+.location{
+  margin: 5% 5% 0 5%;
+}
+ion-input{
+  border: 1px solid rgb(216, 212, 212);
+  --border-radius: 10px;
+  border-radius: 10px;
+  --padding-start: 15px;
+}
+.heading {
+  margin: 0 5%;
+}
+.heading a{
+  text-decoration: none;
+}
+.heading h4{
+  font-size: 17px;
+}
+.rounded-circle {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ion-card{
+  margin: 0 5%;
+  border-radius: 18px;
+  color:white
+}
+ion-card-header {
+  color:white
+}
+ion-card-header p{
+  opacity: 0.7;
+}
+ion-card-header img{
+  width: 50px;
+  height: 50px;
+}
+.schedule-time{
+  background-color: rgb(9, 48, 179);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.icon-span {
+  display: flex;
+  align-items: center;
+}
+.icon-span span {
+  font-size: 11px;
+}
+
+.icon-span ion-icon {
+  font-size: 22px;
+}
+.vertical-line {
+  height: 90%;
+  border: 1px solid gray;
+}
+.doctor-speciality {
+  // overflow-y: auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin: 0 5%;
+  gap: 20px;
+}
+.dr {
+  white-space: nowrap;
+  animation: scroll 5s linear infinite;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+
+.dr img{
+  min-width: 70px !important;
+  height: 70px;
+
+}
+.nearby-hospital{
+  overflow-y: auto;
+  display: flex;
+  gap: 12px;
+  margin: 0 0 0 5%;
+}
+.nearby-hospitals {
+  min-width: 210px !important;
+  display: flex;
+  flex-direction: column;
+  border-radius:  10px;
+}
+.hospitals {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+}
+.dot{
+  font-size: 5px;
+}
+.locations{
+  font-size: 10px;
+
+}
+
+.hospital-location h4{
+  margin-top: 8px !important;
+  font-size:18px;
+}
+.like{
+  margin-top: 10px;
+  margin-left: 170px;
+}
+.star{
+  display:flex;
+  align-items: center;
+  background: white;
+  margin-top: 50px;
+  max-width: fit-content;
+  margin-left: 140px;
+  padding: 1px 8px 1px 8px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.star ion-icon{
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+.rounded{
+  border-radius: 12px !important;
+  height: 120px;
+}
+.intro h3{
+  font-size: 10px;
+  font-weight: 500;
+    background: #DBEAFE;
+    padding: 8px 8px;
+    border-radius: 15px;
+}
+.doctor-name h3{
+  color: black;
+  margin-top: 10px !important;
+  font-size: 13px;
+}
+.doctor-name span{
+  color: darkgrey;
+  margin-top: 10px !important;
+  font-size: 13px;
+}
+.review{
+  color: darkgrey;
+}
+.button-appoint{
+  padding:  0px 15px 15px 15px
+}
+.button-appoint button{
+  text-align: center;
+  background: #DBEAFE;
+  color: #0668FC;
+  box-shadow: 0;
+  width: -webkit-fill-available;
+  border-radius: 10px;
+  padding: 15px;
+}
+ion-menu::part(backdrop) {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+ion-menu::part(container) {
+  height: 100vh;
+  border-radius: 0 20px 20px 0;
+
+  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+}

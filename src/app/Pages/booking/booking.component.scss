@@ -1,0 +1,166 @@
+.title{
+  span{
+    font-weight: 600;
+  }
+  ion-icon{
+    border: 1px solid lightslategrey;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 50px;
+  }
+}
+.doctor{
+  img{
+    background-color: #DFDEE6;
+    border-radius: 50%;
+  }
+  .check{
+    position: absolute;
+    left: 85px;
+    top: 63px;
+  }
+  span,h5{
+    font-size: 14px;
+    color: #8B8B8B;
+  }
+
+}
+hr{
+  color: #8B8B8B;
+  margin-left: 5%;
+  width: 90%;
+}
+.views{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+  ion-icon{
+    padding: 15px;
+    background: #DBEAFE;
+    font-size: 25px;
+    border-radius: 50%;
+  }
+  h4{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  h5{
+    font-size: 13px;
+    color: #8B8B8B;
+    font-weight: 500;
+  }
+}
+h2{
+  font-size: 15px;
+  color: #8B8B8B;
+  font-weight: 500;
+  margin-left: 10%;
+}
+h1{
+  font-size: 20px;
+  margin-left: 10%;
+}
+.day {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  gap: 10px;
+  .days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 3px;
+  border: 1px solid lightslategrey;
+  padding: 5px 25px;
+  margin-left: 5px;
+  min-width: 85px;
+  span {
+    margin: 0;
+    font-size: 10.5px;
+  }
+  h4 {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+}
+
+.time {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  gap: 10px;
+  .days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 3px;
+  border: 1px solid lightslategrey;
+  padding: 10px 25px;
+  margin-left: 5px;
+  min-width: 115px;
+  h4 {
+    margin: 0;
+    font-size: 15px;
+  }
+}
+}
+.request{
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color:  #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 10px;
+  p,span{
+    font-size: 12px;
+  }
+
+}
+
+
+ion-modal {
+  position: absolute;
+  bottom: -50%;
+  --height: 35%;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgb(17, 19, 20);
+  opacity: .5;
+}
+ion-toolbar p{
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro h3{
+  font-size: 13px;
+  font-weight: 500;
+    background: #DBEAFE;
+    padding: 8px 8px;
+    border-radius: 15px;
+}
+.doctor-name h3{
+  margin-top: 10px !important;
+  font-size: 13px;
+}
+.doctor-name span{
+  margin-top: 10px !important;
+  font-size: 13px;
+}
+.custom-button ion-button{
+  min-width: 100%;
+  font-size: 15px;
+}

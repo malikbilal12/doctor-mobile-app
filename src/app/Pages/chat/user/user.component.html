@@ -1,0 +1,129 @@
+<ion-content color="primary">
+  <div id="sticky-title-container" color="primary">
+    <ion-row class="title" color="primary">
+      <ion-col size="2">
+        <ion-icon
+          [routerLink]="['/chat']"
+          color="primary"
+          name="arrow-back"
+        ></ion-icon>
+      </ion-col>
+      <ion-col size="8">
+        <div class="d-flex flex-direction-colomn">
+          <div class="me-2"><ion-img src="../../../assets/doc.png" /></div>
+          <div class="mt-2">
+            <h5 class="m-0">{{ user.n }}</h5>
+            <span>{{ user.isActive ? "Online" : "Ofline" }}</span>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="2"
+        ><ion-icon
+          class="setting"
+          color="primary"
+          name="ellipsis-vertical"
+        ></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div>
+    <ion-row class="ion-no-padding">
+      <div class="main">
+        <ion-text class="ion-text-center">Today</ion-text>
+      </div>
+    </ion-row>
+    <ion-row class="chats">
+      <div>
+        <ion-card>
+          <ion-text
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+            laudantium</ion-text
+          >
+        </ion-card>
+        <ion-col size="12" class="user">
+          <span class="d-flex flex-direction-colomn align-items-center gap-1">
+            <ion-img src="../../../assets/doc.png" />
+            <ion-text class="text-dark">{{ user.n }}</ion-text>
+          </span>
+          <span class="text-dark">{{ user.t }}</span>
+        </ion-col>
+      </div>
+      <div>
+        <ion-card>
+          <ion-text
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+            laudantium</ion-text
+          >
+        </ion-card>
+        <ion-col size="12" class="user">
+          <span class="d-flex flex-direction-colomn align-items-center gap-1">
+            <ion-img src="../../../assets/doc.png" />
+            <ion-text class="text-dark">{{ user.n }}</ion-text>
+          </span>
+          <span class="text-dark">{{ user.t }}</span>
+        </ion-col>
+      </div>
+      <div>
+        <ion-card class="own">
+          <ion-text
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+            laudantium</ion-text
+          >
+        </ion-card>
+        <ion-col size="12" class="own-user">
+          <span class="text-dark time">{{ user.t }}</span>
+          <span class="d-flex flex-direction-colomn align-items-center gap-1">
+            <ion-img src="../../../assets/doc.png" />
+            <ion-text class="text-dark">Esthor Howard</ion-text>
+          </span>
+        </ion-col>
+      </div>
+      <div>
+        <ion-card>
+          <ion-img src="../../../assets/doc.png" />
+        </ion-card>
+        <ion-col size="12" class="user">
+          <span class="d-flex flex-direction-colomn align-items-center gap-1">
+            <ion-img src="../../../assets/doc.png" />
+            <ion-text class="text-dark">{{ user.n }}</ion-text>
+          </span>
+          <span class="text-dark"
+            >{{ user.t }}<ion-icon color="primary" name="trash"></ion-icon
+          ></span>
+        </ion-col>
+      </div>
+      <div *ngFor="let message of messages()">
+        <ion-card>
+          <ion-text>{{ message.message }}</ion-text>
+        </ion-card>
+        <ion-col size="12" class="user">
+          <span class="d-flex flex-direction-colomn align-items-center gap-1">
+            <ion-img src="../../../assets/doc.png" />
+            <ion-text class="text-dark">{{ user.n }}</ion-text>
+          </span>
+          <span class="text-dark"
+            >{{ user.t }}
+            <ion-icon (click)="deleteMessage(message)" name="trash"></ion-icon
+          ></span>
+        </ion-col>
+      </div>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-item lines="none">
+    <ion-icon name="add" color="primary"></ion-icon>
+    <ion-input
+      [(ngModel)]="message"
+      class="ms-2"
+      placeholder="Type a message here ..."
+    ></ion-input>
+    <ion-icon
+      (click)="createMessage()"
+      class="mic"
+      name="mic"
+      color="light"
+      slot="end"
+    ></ion-icon>
+  </ion-item>
+</ion-footer>

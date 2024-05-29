@@ -1,0 +1,43 @@
+<ion-content class="background-image" no-scroll padding>
+  <ion-row>
+    <ion-col size="10">
+      <ion-searchbar
+        class="search-text"
+        placeholder="Search Doctor, Hospital"
+      ></ion-searchbar>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button>
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div class="d-flex justify-content-end mb-3 me-2 locate">
+    <ion-icon color="primary" size="large" name="locate"></ion-icon>
+  </div>
+  <div class="nearby-hospital">
+    <div class="nearby-hospitals shadow mb-2" *ngFor="let loc of location">
+      <div class="hospitals" [style.background-image]="'url(' + loc.img + ')'">
+        <ion-icon
+          size="large"
+          color="light"
+          class="like"
+          name="heart-circle"
+        ></ion-icon>
+        <div class="star">
+          <ion-icon color="warning" name="star"></ion-icon>{{ loc.rate }}
+        </div>
+      </div>
+      <div class="hospital-location bg-light">
+        <h4 class="ms-3 mb-1 fw-400">{{ loc.name }}</h4>
+        <div class="ms-3 mb-2 d-flex align-items-center">
+          <ion-icon color="primary" class="me-1" name="time"></ion-icon>
+          <span class="locations">{{ loc.time }}</span>
+          <ion-icon class="mx-2 dot" size name="ellipse"></ion-icon>
+          <span class="locations">{{ loc.dist }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

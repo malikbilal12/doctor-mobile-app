@@ -1,0 +1,83 @@
+ion-content{
+  --background: #fff url('/assets/map.jpg') no-repeat center center / cover;
+  ion-row{
+    padding: 20px 10px 0 10px;
+    display: flex;
+    align-items: center;
+    ion-col{
+      padding: 0;
+      max-width: 80% !important;
+      ion-searchbar.search-text{
+        font-size: 5px !important;
+      }
+    }
+    ion-button{
+      font-size: 19px;
+    }
+  }
+}
+.locate{
+  margin-top: 70%;
+  ion-icon{
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  }
+}
+
+.nearby-hospital{
+  overflow-y: auto;
+  display: flex;
+  gap: 12px;
+  margin: 0 0 0 5%;
+}
+.nearby-hospitals {
+  min-width: 250px !important;
+  display: flex;
+  flex-direction: column;
+  border-radius:  10px;
+}
+.hospitals {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+}
+.dot{
+  font-size: 5px;
+}
+.locations{
+  font-size: 10px;
+
+}
+
+.hospital-location h4{
+  margin-top: 8px !important;
+  font-size:18px;
+}
+.like{
+  margin-top: 10px;
+  margin-left: 210px;
+}
+.star{
+  display:flex;
+  align-items: center;
+  background: white;
+  margin-top: 50px;
+  max-width: fit-content;
+  margin-left: 180px;
+  padding: 1px 8px 1px 8px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.star ion-icon{
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+.rounded{
+  border-radius: 12px !important;
+  height: 120px;
+}

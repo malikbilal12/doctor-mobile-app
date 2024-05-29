@@ -1,0 +1,79 @@
+<ion-content class="ion-padding">
+  <ion-item lines="none" class="title mt-4">
+    <ion-icon
+      slot="start"
+      [routerLink]="['/home']"
+      name="arrow-back"
+    ></ion-icon>
+    <span>Make Appointment</span>
+  </ion-item>
+
+  <ion-row class="mt-5 ms-3 main">
+    <ion-col size="4"
+      ><ion-img src="/assets/doc.png"></ion-img>
+      <div class="w-100 d-flex justify-content-end">
+        <ion-icon class="dot" name="ellipse"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size="8">
+      <h1 class="mt-2 mb-1">{{ doc.name }}</h1>
+      <p>{{ doc.p }}</p>
+      <p>
+        <ion-icon color="primary" name="location"></ion-icon> New York, United
+        State
+      </p>
+    </ion-col>
+  </ion-row>
+  <hr />
+  <h4>Scheduled Appointment</h4>
+  <ion-item lines="none" class="m-0">
+    <ion-text slot="start"><span>Date</span></ion-text>
+    <ion-text slot="end">August 24, 2024</ion-text>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-text slot="start"><span>Time</span></ion-text>
+    <ion-text slot="end">10:00 - 10:30 (30 mintues)</ion-text>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-text slot="start"><span>Booking for</span></ion-text>
+    <ion-text slot="end">Self</ion-text>
+  </ion-item>
+
+  <hr />
+  <h4>Patient Info.</h4>
+  <ion-item lines="none" class="m-0">
+    <ion-text slot="start"><span>Full Name</span></ion-text>
+    <ion-text slot="end">Esther Howard</ion-text>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-text slot="start"><span>Gender</span></ion-text>
+    <ion-text slot="end">Male</ion-text>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-text slot="start"><span>Problem</span></ion-text>
+    <ion-text slot="end">Lorem Ipsum dolor</ion-text>
+  </ion-item>
+  <hr />
+  <ion-card class="ion-padding">
+    <ion-item lines="none">
+      <span slot="start" class="card-first">
+        <ion-icon color="primary" name="chatbox-ellipses"></ion-icon>
+        <ion-text
+          ><p class="m-0 text-dark">Messaging</p>
+          <p class="m-0">Chat with Doctor</p>
+        </ion-text>
+      </span>
+      <span slot="end">
+        <p class="m-0 text-dark">$20</p>
+        <p class="m-0 text-success">Paid</p>
+      </span>
+    </ion-item>
+  </ion-card>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-button shape="round" size="large" class="text-capitalize">
+      Message (Starts at 16:00)
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
