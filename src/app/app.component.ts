@@ -14,12 +14,12 @@ export class AppComponent {
 
   async initApp() {
     try {
-      // const initialized = await this.database.initializePlugin();
-      // if (initialized) {
-      //   SplashScreen.hide();
-      // } else {
-      //   console.error('Database initialization failed');
-      // }
+      const initialized = await this.database.initializePlugin();
+      if (initialized) {
+        SplashScreen.hide();
+      } else {
+        console.error('Database initialization failed');
+      }
     } catch (error) {
       console.error('Error during app initialization:', error);
     }
